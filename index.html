@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>About Me | Ken</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcute icon" type="x-icon" href="icon.png">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Sonw</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">About Me</h2>
+            <a href="#sec" id="btn">Scroll Down</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>About Sonw</h2>
+           <p>Hello! please introduce my name as Tran Minh Son and I am a young child. I was born on 07/25(i wouldn't say my year of birth :>). And I'm not too ignorant or too talented, just a normal person like everyone else!!! Am I friendly? and the answer is yes (or no because I'm also annoyed and annoyed sometimes).<br><br>I am also a YouTuber, i often do about videos such as: Games, Musics, Video Editor, AMV,...,<br><br>If you want to know more about me, or talk to me and be friends with me<br><br>Also you can check out the links I put it here:<br><br><a href="https://www.facebook.com/MinhSonw2507">
+           Facebook
+           </a><br><a href="https://www.youtube.com/c/IshiGamerKen">
+            Youtube
+           </a><br><br>I'll update more in the future!!!</p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                text.style.marginRight = value * 4  + 'px';
+                text.style.marginTop = value * 1.5  + 'px';
+                btn.style.marginRight = value * 4  + 'px';
+                header.style.top = value * 0.5  + 'px';
+            })
+        </script>
+    </body>
+</html>
